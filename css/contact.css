@@ -1,0 +1,851 @@
+/*==================================
+        CONTACT BANNER
+==================================*/
+
+.contact-banner{
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 180px 0 120px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fbff
+    );
+}
+
+.contact-banner-content{
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+.contact-banner .banner-tag{
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    border-radius: 50px;
+
+    background: rgba(79,70,229,.08);
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+
+/*==================================
+      SPLIT REVEAL HEADING
+==================================*/
+
+.contact-banner h1{
+    font-size: 4rem;
+
+    line-height: 1.2;
+
+    color: var(--dark);
+
+    margin-bottom: 25px;
+
+    animation: splitReveal 1s ease;
+}
+
+.contact-banner p{
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: var(--text);
+
+    font-size: 1.1rem;
+
+    line-height: 1.9;
+}
+
+
+/*==================================
+        CONTACT INFO
+==================================*/
+
+.contact-info{
+    background: #ffffff;
+}
+
+.contact-info-grid{
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 30px;
+
+    margin-top: 60px;
+}
+
+
+/*==================================
+      CONTACT CARDS
+==================================*/
+
+.contact-card{
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 40px 30px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.05);
+
+    transition: all .4s ease;
+}
+
+.contact-card:hover{
+    transform: translateY(-12px);
+
+    box-shadow: 0 25px 50px rgba(0,0,0,.08);
+}
+
+
+/*==================================
+      MAGNETIC EFFECT
+==================================*/
+
+.magnetic-card::before{
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+    right: -100px;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(79,70,229,.05);
+
+    transition: .5s ease;
+}
+
+.magnetic-card:hover::before{
+    top: -60px;
+    right: -60px;
+}
+
+
+/*==================================
+        CONTACT ICONS
+==================================*/
+
+.contact-icon{
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+
+    font-size: 2rem;
+
+    transition: .4s ease;
+}
+
+.contact-card:hover .contact-icon{
+    transform: scale(1.1) rotate(8deg);
+}
+
+.contact-card h3{
+    color: var(--dark);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 15px;
+}
+
+.contact-card p{
+    color: var(--text);
+
+    line-height: 1.8;
+}
+
+
+/*==================================
+      CONTACT ANIMATIONS
+==================================*/
+
+@keyframes splitReveal{
+
+    0%{
+        opacity: 0;
+
+        letter-spacing: 10px;
+
+        transform: translateY(40px);
+    }
+
+    100%{
+        opacity: 1;
+
+        letter-spacing: normal;
+
+        transform: translateY(0);
+    }
+
+}
+
+/*==================================
+        CONTACT FORM
+==================================*/
+
+.contact-form-section{
+    background: #f9fbff;
+}
+
+.contact-wrapper{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/*==================================
+        FORM CONTENT
+==================================*/
+
+.form-content .section-subtitle{
+    display: inline-block;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.form-content h2{
+    color: var(--dark);
+
+    font-size: 3rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+}
+
+.form-content p{
+    color: var(--text);
+
+    line-height: 1.9;
+}
+
+
+/*==================================
+      CONTACT FORM CARD
+==================================*/
+
+.contact-form-card{
+    padding: 50px 40px;
+
+    border-radius: 35px;
+
+    background: rgba(255,255,255,.8);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.06);
+}
+
+.contact-form{
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+/*==================================
+        FORM GROUP
+==================================*/
+
+.form-group{
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea{
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 15px 0;
+
+    color: var(--dark);
+
+    font-size: 1rem;
+
+    resize: none;
+}
+
+
+/*==================================
+        FLOATING LABELS
+==================================*/
+
+.form-group label{
+    position: absolute;
+
+    top: 15px;
+    left: 0;
+
+    color: #94a3b8;
+
+    pointer-events: none;
+
+    transition: .3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label{
+    top: -12px;
+
+    font-size: .85rem;
+
+    color: var(--primary);
+}
+
+
+/*==================================
+      UNDERLINE ANIMATION
+==================================*/
+
+.input-line{
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: rgba(148,163,184,.3);
+}
+
+.input-line::before{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 0;
+    height: 100%;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition: .4s ease;
+}
+
+.form-group input:focus ~ .input-line::before,
+.form-group textarea:focus ~ .input-line::before{
+    width: 100%;
+}
+
+
+/*==================================
+        OFFICE LOCATIONS
+==================================*/
+
+.office-locations{
+    background: #ffffff;
+}
+
+.office-grid{
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 30px;
+
+    margin-top: 60px;
+}
+
+
+/*==================================
+        OFFICE CARD
+==================================*/
+
+.office-card{
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.05);
+
+    transition: .4s ease;
+}
+
+.office-card:hover{
+    transform: translateY(-12px);
+
+    box-shadow: 0 25px 50px rgba(0,0,0,.08);
+}
+
+
+/*==================================
+        OFFICE ICON
+==================================*/
+
+.office-icon{
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+
+    font-size: 1.8rem;
+}
+
+.office-card h3{
+    color: var(--dark);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 15px;
+}
+
+.office-card p{
+    color: var(--text);
+
+    margin-bottom: 10px;
+}
+
+.office-card span{
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+
+/*==================================
+      FLOATING PIN EFFECT
+==================================*/
+
+.location-float{
+    animation: pinFloat 4s ease-in-out infinite;
+}
+
+.office-card:nth-child(2){
+    animation-delay: .5s;
+}
+
+.office-card:nth-child(3){
+    animation-delay: 1s;
+}
+
+
+/*==================================
+        PIN ANIMATION
+==================================*/
+
+@keyframes pinFloat{
+
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+}
+
+/*==================================
+          FAQ SECTION
+==================================*/
+
+.contact-faq{
+    background: #f9fbff;
+}
+
+.faq-wrapper{
+    max-width: 850px;
+
+    margin: 60px auto 0;
+}
+
+.faq-item{
+    margin-bottom: 20px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+
+    transition: .3s ease;
+}
+
+.faq-item:hover{
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+
+/*==================================
+        FAQ QUESTION
+==================================*/
+
+.faq-question{
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.faq-question span{
+    color: var(--dark);
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+}
+
+.faq-question i{
+    color: var(--primary);
+
+    font-size: 1rem;
+
+    transition: .3s ease;
+}
+
+
+/*==================================
+        FAQ ANSWER
+==================================*/
+
+.faq-answer{
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .4s ease;
+}
+
+.faq-answer p{
+    padding: 0 30px 25px;
+
+    color: var(--text);
+
+    line-height: 1.8;
+}
+
+
+/*==================================
+      FAQ ACTIVE STATE
+==================================*/
+
+.faq-item.active .faq-answer{
+    max-height: 200px;
+}
+
+.faq-item.active .faq-question i{
+    transform: rotate(45deg);
+}
+
+
+/*==================================
+          CONTACT CTA
+==================================*/
+
+.contact-cta{
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 100px 0;
+
+    background: #0f172a;
+
+    text-align: center;
+}
+
+.contact-cta .cta-content{
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+.contact-cta span{
+    display: inline-block;
+
+    color: rgba(255,255,255,.75);
+
+    margin-bottom: 15px;
+
+    font-weight: 600;
+}
+
+.contact-cta h2{
+    color: #ffffff;
+
+    font-size: 3rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+.contact-cta p{
+    color: rgba(255,255,255,.8);
+
+    line-height: 1.9;
+
+    margin-bottom: 40px;
+}
+
+
+/*==================================
+        AURORA EFFECT
+==================================*/
+
+.aurora{
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: .25;
+}
+
+.aurora-1{
+    width: 300px;
+    height: 300px;
+
+    background: #4f46e5;
+
+    top: -100px;
+    left: -100px;
+
+    animation: auroraMove1 10s ease-in-out infinite;
+}
+
+.aurora-2{
+    width: 280px;
+    height: 280px;
+
+    background: #7c3aed;
+
+    bottom: -100px;
+    right: -100px;
+
+    animation: auroraMove2 12s ease-in-out infinite;
+}
+
+
+/*==================================
+          CTA BUTTONS
+==================================*/
+
+.contact-cta .cta-buttons{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.contact-cta .secondary-btn{
+    border: 2px solid rgba(255,255,255,.2);
+
+    color: #ffffff;
+}
+
+.contact-cta .secondary-btn:hover{
+    background: rgba(255,255,255,.1);
+}
+
+
+/*==================================
+        AURORA ANIMATIONS
+==================================*/
+
+@keyframes auroraMove1{
+
+    0%,100%{
+        transform: translate(0,0);
+    }
+
+    50%{
+        transform: translate(60px,40px);
+    }
+
+}
+
+@keyframes auroraMove2{
+
+    0%,100%{
+        transform: translate(0,0);
+    }
+
+    50%{
+        transform: translate(-50px,-30px);
+    }
+
+}
+
+
+/*==================================
+          RESPONSIVE
+==================================*/
+
+@media (max-width: 992px){
+
+    .contact-info-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contact-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .office-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .form-content h2,
+    .contact-cta h2{
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .contact-banner{
+        padding: 150px 0 100px;
+    }
+
+    .contact-banner h1{
+        font-size: 2.8rem;
+    }
+
+    .contact-info-grid,
+    .office-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .faq-question{
+        padding: 20px 25px;
+    }
+
+    .contact-cta h2{
+        font-size: 2.2rem;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .contact-banner{
+        padding: 140px 0 90px;
+    }
+
+    .contact-banner h1{
+        font-size: 2.2rem;
+    }
+
+    .contact-form-card{
+        padding: 35px 25px;
+    }
+
+    .faq-question span{
+        font-size: 1rem;
+    }
+
+    .contact-cta h2{
+        font-size: 1.8rem;
+    }
+
+    .contact-cta .cta-buttons{
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,953 @@
+/*==================================
+        SERVICES BANNER
+==================================*/
+
+.services-banner{
+    position: relative;
+    overflow: hidden;
+
+    padding: 180px 0 120px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #f8faff,
+        #eef4ff
+    );
+}
+
+.services-banner-content{
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+.services-banner .banner-tag{
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    border-radius: 50px;
+
+    background: rgba(79,70,229,.1);
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+.services-banner h1{
+    font-size: 4rem;
+
+    line-height: 1.2;
+
+    color: var(--dark);
+
+    margin-bottom: 25px;
+}
+
+.services-banner p{
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: var(--text);
+
+    line-height: 1.9;
+
+    font-size: 1.1rem;
+}
+
+
+/*==================================
+        BANNER SHAPES
+==================================*/
+
+.service-shape{
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: .25;
+
+    filter: blur(80px);
+}
+
+.shape-one{
+    width: 280px;
+    height: 280px;
+
+    background: #4f46e5;
+
+    top: -70px;
+    left: -70px;
+
+    animation: serviceFloat 8s ease-in-out infinite;
+}
+
+.shape-two{
+    width: 220px;
+    height: 220px;
+
+    background: #7c3aed;
+
+    bottom: -60px;
+    right: -60px;
+
+    animation: serviceRotate 18s linear infinite;
+}
+
+
+/*==================================
+        SERVICES INTRO
+==================================*/
+
+.services-intro{
+    background: #ffffff;
+}
+
+.services-grid{
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 30px;
+
+    margin-top: 60px;
+}
+
+
+/*==================================
+        SERVICE CARDS
+==================================*/
+
+.service-card{
+    position: relative;
+
+    background: #ffffff;
+
+    padding: 40px 35px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.05);
+
+    transition: all .4s ease;
+}
+
+.service-card:hover{
+    box-shadow: 0 25px 50px rgba(0,0,0,.08);
+}
+
+.service-icon{
+    width: 85px;
+    height: 85px;
+
+    border-radius: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+
+    font-size: 2rem;
+
+    transition: .4s ease;
+}
+
+.service-card h3{
+    color: var(--dark);
+
+    font-size: 1.6rem;
+
+    margin-bottom: 18px;
+}
+
+.service-card p{
+    color: var(--text);
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+.service-card a{
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.service-card a:hover{
+    gap: 15px;
+}
+
+
+/*==================================
+        TILT EFFECTS
+==================================*/
+
+.tilt-left:hover{
+    transform:
+        perspective(1000px)
+        rotateY(-8deg)
+        translateY(-12px);
+}
+
+.tilt-right:hover{
+    transform:
+        perspective(1000px)
+        rotateY(8deg)
+        translateY(-12px);
+}
+
+.rotate-lift:hover{
+    transform:
+        rotate(2deg)
+        translateY(-15px);
+}
+
+.rotate-lift:hover .service-icon{
+    transform: rotate(15deg);
+}
+
+
+/*==================================
+        CARD DECORATION
+==================================*/
+
+.service-card::before{
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    right: -120px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(79,70,229,.05);
+
+    transition: .5s ease;
+}
+
+.service-card:hover::before{
+    top: -80px;
+    right: -80px;
+}
+
+
+/*==================================
+        UNIQUE ANIMATIONS
+==================================*/
+
+@keyframes serviceFloat{
+
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-25px);
+    }
+
+}
+
+@keyframes serviceRotate{
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
+/*==================================
+        GLOW BORDER EFFECT
+==================================*/
+
+.glow-border{
+    border: 2px solid transparent;
+}
+
+.glow-border:hover{
+    border-color: rgba(79,70,229,.25);
+
+    box-shadow:
+        0 0 0 4px rgba(79,70,229,.08),
+        0 25px 50px rgba(0,0,0,.08);
+
+    transform: translateY(-12px);
+}
+
+.glow-border:hover .service-icon{
+    transform: scale(1.08);
+}
+
+
+/*==================================
+        ICON MORPH EFFECT
+==================================*/
+
+.morph-icon:hover{
+    transform: translateY(-12px);
+}
+
+.morph-icon:hover .service-icon{
+    border-radius: 50%;
+
+    transform: rotate(360deg);
+
+    transition: .6s ease;
+}
+
+
+/*==================================
+        RIPPLE EFFECT
+==================================*/
+
+.ripple-effect{
+    overflow: hidden;
+}
+
+.ripple-effect::after{
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-radius: 50%;
+
+    background: rgba(79,70,229,.08);
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: .6s ease;
+}
+
+.ripple-effect:hover::after{
+    width: 450px;
+    height: 450px;
+}
+
+.ripple-effect:hover{
+    transform: translateY(-12px);
+}
+
+
+/*==================================
+        WORK PROCESS
+==================================*/
+
+.work-process{
+    position: relative;
+
+    background: #f9fbff;
+}
+
+.timeline{
+    position: relative;
+
+    max-width: 1000px;
+
+    margin: 70px auto 0;
+}
+
+
+/*==================================
+        TIMELINE CENTER LINE
+==================================*/
+
+.timeline::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(
+        to bottom,
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius: 50px;
+}
+
+
+/*==================================
+        TIMELINE ITEMS
+==================================*/
+
+.timeline-item{
+    position: relative;
+
+    width: 50%;
+
+    margin-bottom: 60px;
+}
+
+.timeline-item.left{
+    padding-right: 60px;
+
+    text-align: right;
+}
+
+.timeline-item.right{
+    margin-left: 50%;
+
+    padding-left: 60px;
+}
+
+
+/*==================================
+        TIMELINE NUMBER
+==================================*/
+
+.timeline-number{
+    position: absolute;
+
+    top: 20px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    box-shadow: 0 12px 30px rgba(79,70,229,.25);
+
+    animation: pulseNumber 2.5s infinite;
+}
+
+.timeline-item.left .timeline-number{
+    right: -35px;
+}
+
+.timeline-item.right .timeline-number{
+    left: -35px;
+}
+
+
+/*==================================
+        TIMELINE CONTENT
+==================================*/
+
+.timeline-content{
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.05);
+
+    transition: .4s ease;
+}
+
+.timeline-content:hover{
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 50px rgba(0,0,0,.08);
+}
+
+.timeline-content h3{
+    color: var(--dark);
+
+    font-size: 1.6rem;
+
+    margin-bottom: 15px;
+}
+
+.timeline-content p{
+    color: var(--text);
+
+    line-height: 1.9;
+}
+
+
+/*==================================
+        TIMELINE DOTS
+==================================*/
+
+.timeline-content::before{
+    content: "";
+
+    position: absolute;
+
+    top: 40px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    box-shadow: 0 0 0 6px rgba(79,70,229,.12);
+}
+
+.timeline-item.left .timeline-content::before{
+    right: -69px;
+}
+
+.timeline-item.right .timeline-content::before{
+    left: -69px;
+}
+
+
+
+
+@media (max-width: 768px){
+
+    /* Move center line to left */
+    .timeline::before{
+        left: 30px !important;
+        transform: none !important;
+    }
+
+    /* All items full width */
+    .timeline-item{
+        width: 100% !important;
+        margin-bottom: 40px !important;
+    }
+
+    /* Step 1 & 3 */
+    .timeline-item.left{
+        padding-left: 90px !important;
+        padding-right: 0 !important;
+
+        text-align: left !important;
+    }
+
+    /* IMPORTANT: Fix Step 2 & 4 */
+    .timeline-item.right{
+        margin-left: 0 !important;   /* THIS fixes the issue */
+        padding-left: 90px !important;
+        padding-right: 0 !important;
+
+        text-align: left !important;
+    }
+
+    /* Number circles */
+    .timeline-item.left .timeline-number,
+    .timeline-item.right .timeline-number{
+        left: 0 !important;
+        right: auto !important;
+
+        top: 20px;
+    }
+
+    /* Timeline dots */
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before{
+        left: -69px !important;
+        right: auto !important;
+    }
+
+    /* Cards */
+    .timeline-content{
+        padding: 25px !important;
+    }
+}
+/*==================================
+        PROCESS ANIMATIONS
+==================================*/
+
+@keyframes pulseNumber{
+
+    0%{
+        box-shadow:
+            0 0 0 0 rgba(79,70,229,.35);
+    }
+
+    70%{
+        box-shadow:
+            0 0 0 18px rgba(79,70,229,0);
+    }
+
+    100%{
+        box-shadow:
+            0 0 0 0 rgba(79,70,229,0);
+    }
+
+}
+
+/*==================================
+        SERVICE STATISTICS
+==================================*/
+
+.service-stats{
+    background: #ffffff;
+}
+
+.stats-grid{
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 30px;
+
+    margin-top: 60px;
+}
+
+.stat-card{
+    background: #ffffff;
+
+    padding: 40px 30px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.05);
+
+    transition: all .4s ease;
+}
+
+.stat-card:hover{
+    transform: translateY(-12px);
+
+    box-shadow: 0 25px 50px rgba(0,0,0,.08);
+}
+
+
+/*==================================
+        STAT CIRCLE
+==================================*/
+
+.stat-circle{
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        conic-gradient(
+            var(--primary) 0deg,
+            var(--secondary) 280deg,
+            rgba(79,70,229,.1) 280deg
+        );
+}
+
+.stat-circle::before{
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+.stat-circle span{
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--dark);
+
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.stat-card h3{
+    color: var(--dark);
+
+    font-size: 1.4rem;
+
+    margin-bottom: 15px;
+}
+
+.stat-card p{
+    color: var(--text);
+
+    line-height: 1.8;
+}
+
+
+/*==================================
+        SERVICES CTA
+==================================*/
+
+.services-cta{
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 100px 0;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    text-align: center;
+}
+
+.services-cta::before{
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+    left: -100px;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+}
+
+.services-cta::after{
+    content: "";
+
+    position: absolute;
+
+    bottom: -100px;
+    right: -100px;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+}
+
+.services-cta .cta-content{
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+.services-cta .cta-content span{
+    display: inline-block;
+
+    color: rgba(255,255,255,.85);
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.services-cta .cta-content h2{
+    color: #ffffff;
+
+    font-size: 3rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+.services-cta .cta-content p{
+    color: rgba(255,255,255,.85);
+
+    line-height: 1.9;
+
+    margin-bottom: 40px;
+}
+
+.services-cta .cta-buttons{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.services-cta .primary-btn{
+    background: #ffffff;
+
+    color: var(--primary);
+}
+
+.services-cta .primary-btn:hover{
+    transform: translateY(-5px);
+}
+
+.services-cta .secondary-btn{
+    border: 2px solid rgba(255,255,255,.35);
+
+    color: #ffffff;
+}
+
+.services-cta .secondary-btn:hover{
+    background: rgba(255,255,255,.12);
+}
+
+
+/*==================================
+        RESPONSIVE
+==================================*/
+
+@media (max-width: 992px){
+
+    .services-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .stats-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .services-cta .cta-content h2{
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .services-banner{
+        padding: 150px 0 100px;
+    }
+
+    .services-banner h1{
+        font-size: 2.8rem;
+    }
+
+    .services-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before{
+        left: 35px;
+    }
+
+    .timeline-item{
+        width: 100%;
+
+        margin-left: 0;
+
+        padding-left: 90px !important;
+        padding-right: 0 !important;
+
+        text-align: left;
+    }
+
+    .timeline-number{
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    .timeline-content::before{
+        left: -64px !important;
+        right: auto !important;
+    }
+
+    .stats-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .services-cta .cta-content h2{
+        font-size: 2.2rem;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .services-banner h1{
+        font-size: 2.2rem;
+    }
+
+    .service-card{
+        padding: 30px 25px;
+    }
+
+    .stat-circle{
+        width: 100px;
+        height: 100px;
+    }
+
+    .stat-circle span{
+        font-size: 1.3rem;
+    }
+
+    .services-cta .cta-content h2{
+        font-size: 1.8rem;
+    }
+
+    .cta-buttons{
+        flex-direction: column;
+    }
+
+}
